@@ -1,9 +1,10 @@
 {
 	"required": true,
-	"package": "com.example.mixin.client",
+	"package": "uk.debb.bat_uwu.mixin",
 	"compatibilityLevel": "JAVA_21",
-	"client": [
-		"ExampleClientMixin"
+	"mixins": [
+		"MixinBat",
+		"MixinMinecraftServer"
 	],
 	"injectors": {
 		"defaultRequire": 1

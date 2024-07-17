@@ -1,9 +1,9 @@
-# Fabric Example Mod
+# Bat-UWU
 
 ## Setup
 
-For setup instructions please see the [fabric wiki page](https://fabricmc.net/wiki/tutorial:setup) that relates to the IDE that you are using.
+Bats say UWU in chat when they die (requested by a friend).
 
 ## License
 
-This template is available under the CC0 license. Feel free to learn from it and incorporate it in your own projects.
+This template is available under the [MPL-2.0](LICENSE) license. 
