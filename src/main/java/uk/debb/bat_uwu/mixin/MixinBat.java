@@ -8,8 +8,7 @@ import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.ambient.Bat;
 import net.minecraft.world.level.Level;
 import org.spongepowered.asm.mixin.Mixin;
-import org.spongepowered.asm.mixin.Unique;
-import uk.debb.bat_uwu.Constants;
+import uk.debb.bat_uwu.BatUWU;
 
 @Mixin(Bat.class)
 public abstract class MixinBat extends LivingEntity {
@@ -17,18 +16,12 @@ public abstract class MixinBat extends LivingEntity {
         super(entityType, level);
     }
 
-    @Unique
-    private final String[] messages = {
-            "Placeholder 1 % uwu",
-            "Placeholder 2 % owo"
-    };
-
     @Override
     public void die(DamageSource damageSource) {
         if (!this.isRemoved() && !this.dead && damageSource.getEntity() instanceof ServerPlayer serverPlayer) {
-            String message = messages[(int) (Math.random() * messages.length)]
+            String message = BatUWU.messages[(int) (Math.random() * BatUWU.messages.length)]
                     .replace("%", serverPlayer.getName().getString());
-            Constants.server.getPlayerList().broadcastSystemMessage(Component.literal(message), false);
+            BatUWU.server.getPlayerList().broadcastSystemMessage(Component.literal(message), false);
         }
         super.die(damageSource);
     }
