@@ -2,7 +2,7 @@
 
 ## Setup
 
-Bats say UWU in chat when they die (requested by a friend).
+Bats say UWU in chat when they die (requested by a friend). Edit `.minecraft/config/bat_uwu.txt` to add messages - messages starting with '#' are ignored; use '%' as a placeholder for the killing player's name.
 
 ## License
 
